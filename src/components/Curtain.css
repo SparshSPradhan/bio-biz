@@ -1,0 +1,108 @@
+/* Curtain Container */
+.curtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Left and Right Curtain Panels */
+  .curtain-left,
+  .curtain-right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #0d6efd; /* Primary color */
+    transition: transform 1s ease-in-out;
+  }
+  
+  .curtain-left {
+    left: 0;
+  }
+  
+  .curtain-right {
+    right: 0;
+  }
+  
+  /* Split Animation */
+  .curtain.hidden .curtain-left {
+    transform: translateX(-100%);
+  }
+  
+  .curtain.hidden .curtain-right {
+    transform: translateX(100%);
+  }
+  
+  /* Curtain Content */
+  .curtain-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .curtain-content h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 20px;
+  }
+  
+  /* Logo Animation */
+  .curtain-logo {
+    width: 100px;
+    animation: scaleUp 2s ease-in-out;
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Loading Bar */
+  .loading-bar {
+    width: 80%;
+    height: 5px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .loading-bar::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: #ffcc00; /* Highlight color */
+    animation: loading 2s infinite;
+  }
+  
+  @keyframes loading {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  /* Hide Curtain */
+  .curtain.hidden {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  

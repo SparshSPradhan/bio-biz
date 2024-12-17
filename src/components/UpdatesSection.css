@@ -1,0 +1,28 @@
+.updates-section {
+    background-color: #f8f9fa;
+  }
+  
+  .updates-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .updates-section .btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .updates-section .btn:hover {
+    background-color: #ffcc00;
+    color: #fff;
+  }
+  

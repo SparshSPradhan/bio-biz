@@ -1,0 +1,9 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.hero-section {
+  background-image: url("/assets/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
